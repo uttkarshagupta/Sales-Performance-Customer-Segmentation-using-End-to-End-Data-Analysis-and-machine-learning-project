@@ -1,7 +1,8 @@
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, render_template, request, url_for
 import joblib
 import numpy as np
 import os
+import matplotlib.pyplot as plt
 
 app = Flask(__name__)
 
@@ -10,7 +11,7 @@ MODEL_PATH = os.path.join('model', 'Final_model.sav')
 
 @app.route("/")
 def index():
-    return render_template("home.html")  # Make sure 'home.html' is in the 'templates' folder
+    return render_template("home.html")
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -33,8 +34,20 @@ def predict():
     model = joblib.load(MODEL_PATH)
     Y_pred = model.predict(X)
 
-    # Return the prediction as a JSON response
-    return jsonify({'Prediction': float(Y_pred)})
+    # Generate a bar plot of feature values
+    plt.figure(figsize=(8, 4))
+    features = ['Item Weight', 'Item Fat Content', 'Item Visibility', 'Item Type', 
+                'Item MRP', 'Outlet Establishment Year', 'Outlet Size', 
+                'Outlet Location Type', 'Outlet Type']
+    values = X.flatten()
+    
+    plt.barh(features, values, color='skyblue')
+    plt.xlabel('Feature Value')
+    plt.title('Feature Values for Prediction')
+    plt.savefig('static/plot.png')  # Save plot to static folder
+
+    # Return the prediction and link to plot
+    return render_template("result.html", prediction=float(Y_pred), plot_url=url_for('static', filename='plot.png'))
 
 if __name__ == "__main__":
     app.run(debug=True, port=9457)

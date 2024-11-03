@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="header-title">Prediction Result</h1>
+    </header>
+
+    <div class="container">
+        <h2>Your Predicted Sales:</h2>
+        <p class="prediction-value">{{ prediction }}</p>
+
+        <h3>Feature Values for Prediction:</h3>
+        <img src="{{ plot_url }}" alt="Feature Values for Prediction" class="result-plot">
+
+        <a href="/" class="btn btn-primary">Make Another Prediction</a>
+    </div>
+
+</body>
+</html>

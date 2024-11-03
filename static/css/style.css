@@ -1,0 +1,78 @@
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667292, #a2b9bc);
+    color: #333;
+  }
+  
+  /* Header */
+  .header {
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  /* Form Container */
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+  }
+  
+  .submit-btn, .reset-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submit-btn {
+    background-color: #667292;
+    color: white;
+    margin-right: 10px;
+  }
+  
+  .reset-btn {
+    background-color: #d9534f;
+    color: white;
+  }
+  
+  /* Prediction Result */
+  .prediction-value {
+    font-size: 2rem;
+    color: #667292;
+    margin: 20px 0;
+  }
+  
+  .result-plot {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
