@@ -1,1 +1,0 @@
-# Sales-Performance-Customer-Segmentation-using-End-to-End-Data-Analysis-and-machine-learning-project
