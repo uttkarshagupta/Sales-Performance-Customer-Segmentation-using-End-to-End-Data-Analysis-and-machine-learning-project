@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sales Performance & Customer Segmentation
 
 This project leverages Python, SQL, and Power BI to perform comprehensive data analysis and machine learning for sales forecasting and customer segmentation.
@@ -76,3 +77,6 @@ This project provides actionable insights and accurate sales predictions, suppor
 1. Clone the repository and install the required libraries.
 2. Run `app.py` using Python to start the Flask application.
 3. Access the app via `http://127.0.0.1:9457` in your browser and enter the item details to get a sales prediction.
+=======
+# Sales-Performance-Customer-Segmentation-using-End-to-End-Data-Analysis-and-machine-learning-project
+>>>>>>> 85e13c475d56d571631bea37114c6f7a9e982204
